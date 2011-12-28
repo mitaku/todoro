@@ -20,6 +20,7 @@ end
 gem 'jquery-rails'
 gem 'haml-rails'
 gem 'formtastic-bootstrap'
+gem 'tabulous'
 
 group :development do
   gem 'pry-rails'
