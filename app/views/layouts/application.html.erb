@@ -3,19 +3,22 @@
 <head>
   <title>Todoro</title>
   <%= stylesheet_link_tag    "application" %>
-  <%= javascript_include_tag "application" %>
   <%= csrf_meta_tags %>
 </head>
 <body>
 <div class="topbar">
   <div class="topbar-inner">
     <div class="container-fluid">
-      <a class="brand" href="#">Todoro</a>
+      <%= brand_logo %>
       <%= tabs %>
     </div>
   </div>
 </div>
-<%= yield %>
-
+<div class="container">
+  <div class="content">
+    <%= yield %>
+  </div>
+</div>
+<%= javascript_include_tag "application" %>
 </body>
 </html>
