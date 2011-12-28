@@ -19,12 +19,11 @@ require 'spec_helper'
 # that an instance is receiving a specific message.
 
 describe TasksController do
-
   # This should return the minimal set of attributes required to create a valid
   # Task. As you add validations to Task, be sure to
   # update the return value of this method accordingly.
   def valid_attributes
-    {}
+    {:name => "hoge"}
   end
 
   describe "GET index" do
@@ -35,26 +34,10 @@ describe TasksController do
     end
   end
 
-  describe "GET show" do
-    it "assigns the requested task as @task" do
-      task = Task.create! valid_attributes
-      get :show, :id => task.id
-      assigns(:task).should eq(task)
-    end
-  end
-
   describe "GET new" do
     it "assigns a new task as @task" do
       get :new
       assigns(:task).should be_a_new(Task)
-    end
-  end
-
-  describe "GET edit" do
-    it "assigns the requested task as @task" do
-      task = Task.create! valid_attributes
-      get :edit, :id => task.id
-      assigns(:task).should eq(task)
     end
   end
 
@@ -72,9 +55,9 @@ describe TasksController do
         assigns(:task).should be_persisted
       end
 
-      it "redirects to the created task" do
+      it "redirects to index" do
         post :create, :task => valid_attributes
-        response.should redirect_to(Task.last)
+        response.should redirect_to(:action => :index)
       end
     end
 
@@ -115,8 +98,8 @@ describe TasksController do
 
       it "redirects to the task" do
         task = Task.create! valid_attributes
-        put :update, :id => task.id, :task => valid_attributes
-        response.should redirect_to(task)
+        put :update, :id => task.id, :task => valid_attributes, :format => :json
+        response.should be_success
       end
     end
 
@@ -127,14 +110,6 @@ describe TasksController do
         Task.any_instance.stub(:save).and_return(false)
         put :update, :id => task.id, :task => {}
         assigns(:task).should eq(task)
-      end
-
-      it "re-renders the 'edit' template" do
-        task = Task.create! valid_attributes
-        # Trigger the behavior that occurs when invalid params are submitted
-        Task.any_instance.stub(:save).and_return(false)
-        put :update, :id => task.id, :task => {}
-        response.should render_template("edit")
       end
     end
   end

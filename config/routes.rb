@@ -1,5 +1,5 @@
 Todoro::Application.routes.draw do
-  resources :tasks
+  resources :tasks, :only => [:index, :new, :create, :update, :destroy]
 
   root :to => 'welcome#index'
 
