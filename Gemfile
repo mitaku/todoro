@@ -32,8 +32,9 @@ group :test do
   gem 'factory_girl'
   gem 'rails3-generators'
   gem 'shoulda-matchers'
-  gem 'spork'
+  gem 'spork', ">= 0.9.0.rc9"
   gem 'database_cleaner'
+  gem 'rb-fsevent'
   gem 'guard-rspec'
   gem 'guard-spork'
   gem 'growl'
