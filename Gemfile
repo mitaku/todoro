@@ -21,6 +21,7 @@ gem 'jquery-rails'
 gem 'haml-rails'
 gem 'formtastic-bootstrap'
 gem 'tabulous'
+gem 'best_in_place'
 
 group :development do
   gem 'pry-rails'
