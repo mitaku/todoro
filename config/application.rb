@@ -28,6 +28,12 @@ module Todoro
     # :all can be used as a placeholder for all plugins not explicitly named.
     # config.plugins = [ :exception_notification, :ssl_requirement, :all ]
 
+    config.generators do |g|
+      g.template_engine :haml
+      g.test_framework :rspec, :fixture => true, :views => false
+      g.fixture_replacement :factory_girl, :dir => "spec/factories"
+    end
+
     # Activate observers that should always be running.
     # config.active_record.observers = :cacher, :garbage_collector, :forum_observer
 
