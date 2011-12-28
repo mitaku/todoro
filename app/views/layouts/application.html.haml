@@ -1,7 +1,7 @@
 !!!
 %html
   %head
-    %title Todoro
+    = head_tags
     = stylesheet_link_tag "application"
     = csrf_meta_tags
   %body
@@ -13,5 +13,6 @@
     .container
       .content
         = yield
+      %footer= footer_content
     .javascripts
       = javascript_include_tag "application"
