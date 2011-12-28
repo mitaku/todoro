@@ -31,6 +31,12 @@ group :test do
   gem 'rspec-rails'
   gem 'factory_girl'
   gem 'rails3-generators'
+  gem 'shoulda-matchers'
+  gem 'spork'
+  gem 'database_cleaner'
+  gem 'guard-rspec'
+  gem 'guard-spork'
+  gem 'growl'
 end
 
 # To use ActiveModel has_secure_password
