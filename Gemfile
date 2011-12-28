@@ -14,14 +14,21 @@ group :assets do
   gem 'sass-rails',   '~> 3.1.5'
   gem 'coffee-rails', '~> 3.1.1'
   gem 'uglifier', '>= 1.0.3'
+  gem 'bootstrap-sass'
 end
 
 gem 'jquery-rails'
 gem 'haml-rails'
+gem 'formtastic-bootstrap'
+
+group :development do
+  gem 'pry-rails'
+  gem 'rails-erd'
+end
 
 group :test do
   gem 'rspec-rails'
-  gem 'factory_girl_rails'
+  gem 'factory_girl'
   gem 'rails3-generators'
 end
 
