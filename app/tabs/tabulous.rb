@@ -57,8 +57,8 @@ Tabulous.setup do |config|
       #----------------------------------------------------------------------------------------------#
       #    TAB NAME        |    DISPLAY TEXT    |    PATH          |    VISIBLE?    |    ENABLED?    #
       #----------------------------------------------------------------------------------------------#
-      [    :tasks_tab      ,    'Tasks'         ,    tasks_path    ,    true        ,    true        ],
       [    :welcome_tab    ,    'Welcome'       ,    root_path     ,    true        ,    true        ],
+      [    :tasks_tab      ,    'Tasks'         ,    tasks_path    ,    true        ,    true        ],
       #----------------------------------------------------------------------------------------------#
       #    TAB NAME        |    DISPLAY TEXT    |    PATH          |    VISIBLE?    |    ENABLED?    #
       #----------------------------------------------------------------------------------------------#
@@ -84,8 +84,8 @@ Tabulous.setup do |config|
       #------------------------------------------------------------#
       #    CONTROLLER    |    ACTION          |    TAB             #
       #------------------------------------------------------------#
-      [    :tasks        ,    :all_actions    ,    :tasks_tab      ],
       [    :welcome      ,    :all_actions    ,    :welcome_tab    ],
+      [    :tasks        ,    :all_actions    ,    :tasks_tab      ],
       #------------------------------------------------------------#
       #    CONTROLLER    |    ACTION          |    TAB             #
       #------------------------------------------------------------#
@@ -97,7 +97,7 @@ Tabulous.setup do |config|
   #-------------
 
   # By default, you cannot click on the active tab.
-  config.active_tab_clickable = false
+  config.active_tab_clickable = true
 
   # By default, the subtabs HTML element is not rendered if it is empty.
   config.always_render_subtabs = false
@@ -130,7 +130,7 @@ Tabulous.setup do |config|
   # generate invalid HTML markup.  They are merely meant to give you a
   # head start or an easy way to prototype quickly.
   # 
-  config.css.scaffolding = true
+  config.css.scaffolding = false
 
   # You can tweak the colors of the generated CSS.
   #

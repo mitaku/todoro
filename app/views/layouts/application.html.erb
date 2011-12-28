@@ -7,7 +7,14 @@
   <%= csrf_meta_tags %>
 </head>
 <body>
-
+<div class="topbar">
+  <div class="topbar-inner">
+    <div class="container-fluid">
+      <a class="brand" href="#">Todoro</a>
+      <%= tabs %>
+    </div>
+  </div>
+</div>
 <%= yield %>
 
 </body>
