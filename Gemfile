@@ -22,6 +22,7 @@ gem 'haml-rails'
 gem 'formtastic-bootstrap'
 gem 'tabulous'
 gem 'best_in_place'
+gem 'grape'
 
 group :development do
   gem 'pry-rails'
