@@ -1,7 +1,10 @@
+require 'api'
 Todoro::Application.routes.draw do
   resources :tasks, :only => [:index, :new, :create, :update, :destroy]
 
   root :to => 'welcome#index'
+  
+  mount Todoro::API => "/api"
 
   # The priority is based upon order of creation:
   # first created -> highest priority.
